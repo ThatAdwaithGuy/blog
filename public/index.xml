@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adwaith Kuchana</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Adwaith Kuchana</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>About Me Hi, I&amp;rsquo;m Adwaith Kuchana, a software developer passionate about clean code, minimalism, and continuous learning.&#xA;What I Do I&amp;rsquo;m a developer who believes in the beauty of simple, elegant solutions. My interests include:&#xA;Backend Development: Building robust and scalable systems System Administration: Managing servers and infrastructure Open Source: Contributing to and maintaining open source projects Writing: Sharing knowledge through blog posts and documentation My Philosophy I believe that the best code is often the simplest code.</description>
+    </item>
+    <item>
+      <title>The Beauty of Minimalism in Code</title>
+      <link>http://localhost:1313/posts/post1/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/post1/</guid>
+      <description>Your blog post content here&amp;hellip;</description>
+    </item>
+  </channel>
+</rss>

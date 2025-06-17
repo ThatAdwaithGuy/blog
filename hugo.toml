@@ -1,0 +1,16 @@
+baseURL = "https://your-domain.com"
+languageCode = "en-us"
+title = "Adwaith Kuchana"
+
+[params]
+  description = "My ramblings about code and my thoughts with some short stories that I write"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Optional: Configure taxonomies if you want tag/category pages
+[taxonomies]
+  tag = "tags"
+  category = "categories"

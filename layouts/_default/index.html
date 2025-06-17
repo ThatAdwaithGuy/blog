@@ -1,0 +1,10 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ range $posts }}
+        {{ if and .Title (not .Date.IsZero) }}
+            {{ partial "blog-post.html" . }}
+        {{ end }}
+    {{ end }}
+{{ end }}

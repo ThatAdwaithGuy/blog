@@ -1,0 +1,51 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<article class="bg-gruvbox-bg1 p-8 border-l-4 border-gruvbox-orange">
+    <header class="mb-8">
+        <h1 class="text-3xl text-gruvbox-fg0 mb-4">{{ .Title }}</h1>
+        <div class="text-gruvbox-fg4 text-sm mb-4">
+            {{ .Date.Format "January 2, 2006" }} • 
+            {{ if .Params.read_time }}
+                {{ .Params.read_time }} min read
+            {{ else }}
+                {{ math.Ceil (div (countwords .Content) 200.0) }} min read
+            {{ end }}
+        </div>
+        {{ if .Params.tags }}
+        <div class="flex flex-wrap gap-2 mb-6">
+            {{ range .Params.tags }}
+                <span class="bg-gruvbox-bg3 text-gruvbox-fg3 px-3 py-1 rounded-full text-sm hover:bg-gruvbox-purple hover:text-gruvbox-fg0 transition-colors duration-300">
+                    {{ . }}
+                </span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+    
+    <div class="prose prose-lg text-gruvbox-fg1 blog-content font-mono">
+        {{ .Content }}
+    </div>
+</article>
+
+<!-- Navigation to other posts -->
+<nav class="mt-8 flex justify-between items-center">
+    {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" 
+           class="text-gruvbox-aqua hover:text-gruvbox-yellow transition-colors duration-300">
+            ← {{ .Title }}
+        </a>
+    {{ else }}
+        <span></span>
+    {{ end }}
+    
+    {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" 
+           class="text-gruvbox-aqua hover:text-gruvbox-yellow transition-colors duration-300">
+            {{ .Title }} →
+        </a>
+    {{ else }}
+        <span></span>
+    {{ end }}
+</nav>
+{{ end }}

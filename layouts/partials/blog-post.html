@@ -1,0 +1,24 @@
+<!-- partials/blog-post.html -->
+<article class="bg-gruvbox-bg1 p-5 border-l-4 border-gruvbox-orange hover:bg-gruvbox-bg2 transition-colors duration-300 blog-post">
+    <h2 class="text-xl text-gruvbox-fg0 mb-1">
+        <a href="{{ .RelPermalink }}" 
+           class="text-gruvbox-fg0 no-underline hover:text-gruvbox-yellow transition-colors duration-300">
+            {{ .Title }}
+        </a>
+    </h2>
+    <div class="text-gruvbox-fg4 text-sm mb-3">
+        {{ .Date.Format "January 2, 2006" }} • 
+        {{ if .Params.read_time }}
+            {{ .Params.read_time }} min read
+        {{ else }}
+            {{ math.Ceil (div (countwords .Content) 200.0) }} min read
+        {{ end }}
+    </div>
+    <div class="flex flex-wrap gap-2">
+        {{ range .Params.tags }}
+            <span class="bg-gruvbox-bg3 text-gruvbox-fg3 px-2 py-1 rounded-full text-xs hover:bg-gruvbox-purple hover:text-gruvbox-fg0 transition-colors duration-300 cursor-pointer">
+                {{ . }}
+            </span>
+        {{ end }}
+    </div>
+</article>
